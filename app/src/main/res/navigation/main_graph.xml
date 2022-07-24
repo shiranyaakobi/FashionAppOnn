@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/contactFragment"
+        tools:layout="@layout/fragment_contact"
+        android:name="com.idc.fashion.ContactFragment"
+        android:label="ContactFragment" />
+    <fragment
+        android:id="@+id/showItemFragment"
+        tools:layout="@layout/fragment_show_item"
+        android:name="com.idc.fashion.ShowItemFragment"
+        android:label="ShowItemFragment" >
+        <action
+            android:id="@+id/action_showItemFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.idc.fashion.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" />
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.idc.fashion.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_showItemFragment"
+            app:destination="@id/showItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.idc.fashion.CategoryFragment"
+        android:label="fragment_category_list"
+        tools:layout="@layout/fragment_category_list" >
+        <action
+            android:id="@+id/action_categoryFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,62 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/items_card"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:layout_margin="8dp"
+
+    card_view:cardBackgroundColor="#6D548C"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxWidth="100dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/item_photo"
+            android:layout_width="90dp"
+            android:scaleType="fitXY"
+            android:layout_height="100dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/pants_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/click_for_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Show details"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
